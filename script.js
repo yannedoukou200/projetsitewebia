@@ -66,3 +66,14 @@ if (tiltCard && tiltImg) {
         tiltImg.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
     });
 }
+
+// 7. Forcer la lecture de la vidéo en arrière-plan
+const bgVideo = document.querySelector('.bg-video');
+if (bgVideo) {
+    bgVideo.play().catch(function() {
+        // Démarre dès le premier clic ou survol si le navigateur avait suspendu l'autoplay
+        document.body.addEventListener('click', function() {
+            bgVideo.play();
+        }, { once: true });
+    });
+}
