@@ -1,0 +1,167 @@
+/* 1. Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Style général de la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc; /* Gris très clair et moderne */
+    color: #334155;           /* Texte gris foncé, plus agréable que le noir pur */
+    line-height: 1.6;          /* Espacement entre les lignes pour faciliter la lecture */
+}
+
+/* 3. L'en-tête (Header) */
+header {
+    background: linear-gradient(135deg, #0a192f 0%, #1e40af 50%, #0284c7 100%); /* Dégradé bleu riche et moderne */
+    color: #ffffff;
+    padding: 3rem 1rem 2rem 1rem;
+    text-align: center;
+}
+
+/* Style de la photo de profil */
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Transforme l'image carrée en cercle parfait */
+    object-fit: cover;
+    object-position: center 20%; /* Cadre parfaitement le haut du corps et le visage */
+    border: 4px solid #38bdf8; /* Anneau bleu cyan lumineux */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.2rem;
+}
+
+header h1 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+/* Le menu de navigation */
+nav ul {
+    list-style: none; /* Supprime les puces rondes */
+    display: flex;     /* Aligne les éléments horizontalement */
+    justify-content: center;
+    gap: 1.5rem;      /* Espace entre chaque lien */
+}
+
+nav a {
+    color: #38bdf8;        /* Couleur cyan moderne */
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* Effet quand la souris survole un lien */
+nav a:hover {
+    color: #ffffff;
+}
+
+/* 4. Le conteneur principal */
+main {
+    max-width: 800px; /* Empêche le texte de s'étaler sur tout l'écran */
+    margin: 2.5rem auto; /* Centre la page horizontalement */
+    padding: 0 1.5rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+section h2 {
+    color: #0f172a;
+    border-bottom: 2px solid #38bdf8; /* Ligne sous les titres */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/* 5. Les cartes de projets */
+article {
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 8px;        /* Coins arrondis */
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #0284c7; /* Liseré bleu sur le côté */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-4px); /* Légère surélévation interactive au survol */
+    box-shadow: 0 10px 20px -3px rgba(2, 132, 199, 0.15);
+}
+
+article h3 {
+    color: #0284c7;
+    margin-bottom: 0.5rem;
+}
+
+/* 6. Liens de contact */
+#contact ul {
+    list-style-type: square;
+    margin-left: 1.5rem;
+}
+
+#contact a {
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* 7. Pied de page */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* 8. Style du bouton de thème */
+.theme-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 0.45rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.25s ease;
+}
+
+.theme-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* 9. Styles pour le Mode Sombre */
+body.dark-mode {
+    background-color: #0b1120; /* Fond noir bleuté nuit */
+    color: #cbd5e1;           /* Texte clair reposant */
+}
+
+body.dark-mode section h2 {
+    color: #f8fafc;
+}
+
+body.dark-mode article {
+    background-color: #1e293b; /* Cartes gris foncé */
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+body.dark-mode article h3 {
+    color: #38bdf8; /* Titre de carte en cyan */
+}
+
+body.dark-mode #contact a {
+    color: #38bdf8;
+}
