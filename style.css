@@ -23,7 +23,7 @@ header {
     text-align: center;
 }
 
-/* Conteneur de la vidéo d'arrière-plan */
+/* Conteneur de l'arrière-plan IA */
 .video-container {
     position: absolute;
     top: 0;
@@ -34,22 +34,24 @@ header {
     overflow: hidden;
 }
 
-.bg-video {
+#ai-network-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0.65; /* Vidéo bien visible et éclatante */
-    filter: brightness(0.9) contrast(1.15);
+    display: block;
 }
 
-/* Voile dégradé léger pour préserver le contraste du texte */
+/* Voile dégradé subtil */
 .video-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(10, 25, 47, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%);
+    background: linear-gradient(180deg, rgba(10, 25, 47, 0.25) 0%, rgba(15, 23, 42, 0.75) 100%);
+    pointer-events: none;
 }
 
 .header-content {
