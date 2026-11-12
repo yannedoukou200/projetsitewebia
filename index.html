@@ -8,20 +8,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- En-tête : Photo, Titre et Menu de navigation -->
+    <!-- En-tête avec Vidéo IA/Robotique en arrière-plan et Photo en 3D -->
     <header>
-        <img src="images/yann.jpg" alt="Photo de profil de Yann Edoukou" class="profile-pic">
-        <h1>Yann Edoukou — Passionné par la Data</h1>
-        <nav>
-            <ul>
-                <li><a href="#a-propos">À propos</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <!-- Vidéo d'arrière-plan IA & Robotique -->
+        <div class="video-container">
+            <video autoplay loop muted playsinline class="bg-video">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-futuristic-robotic-arm-in-a-laboratory-42777-large.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
 
-        <!-- Bouton pour basculer en mode sombre -->
-        <button id="theme-toggle" class="theme-btn">🌙 Mode Sombre</button>
+        <div class="header-content">
+            <!-- Photo entourée d'un anneau 3D interactif -->
+            <div class="profile-3d-wrapper">
+                <div class="ring-3d"></div>
+                <img src="images/yann.jpg" alt="Photo de profil de Yann Edoukou" class="profile-pic tilt-3d">
+            </div>
+
+            <h1>Yann Edoukou — Passionné par la Data</h1>
+            <nav>
+                <ul>
+                    <li><a href="#a-propos">À propos</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Boutons d'action dans l'en-tête -->
+            <div class="header-buttons">
+                <button id="voice-btn" class="action-btn voice-btn">🔊 Écouter l'accueil</button>
+                <button id="theme-toggle" class="action-btn theme-btn">🌙 Mode Sombre</button>
+            </div>
+        </div>
     </header>
 
     <!-- Contenu principal -->
